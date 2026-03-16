@@ -44,9 +44,7 @@ export function Navbar() {
             ))}
           </div>
 
-          <div className="hidden md:flex">
-            <Button size="sm" variant="primary" className="bg-primary hover:bg-primary/80 border-none">Register Now</Button>
-          </div>
+
 
           <button className="md:hidden text-white cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -65,7 +63,7 @@ export function Navbar() {
               {link.name}
             </Link>
           ))}
-          <Button size="md" variant="primary" className="w-full mt-4 bg-primary border-none">Register Now</Button>
+
         </motion.div>
       )}
     </motion.nav>

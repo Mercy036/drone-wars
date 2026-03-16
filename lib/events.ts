@@ -6,58 +6,166 @@ export interface Event {
     description: string;
     image: string;
     color: string;
-    category: "TECHNICAL" | "ENTREPRENEURIAL" | "MISCELLANEOUS";
+    category: "COMPETITION" | "EXHIBITION" | "TECHNICAL" | "ENTREPRENEURIAL" | "MISCELLANEOUS";
+    skillsTested: string[];
+    prizePool: {
+        total: string;
+        first: string;
+        second: string;
+        third: string;
+        other?: string;
+    };
+    timeline: {
+        day1?: { time: string; activity: string }[];
+        day2?: { time: string; activity: string }[];
+    };
 }
 
 export const events: Event[] = [
     {
-        slug: "robogames",
-        title: "ROBOGAMES",
-        date: "March 20, 2026",
-        location: "Neo Tokyo Arena",
-        description: "Robogames is Techkriti's flagship robotics basket, featuring autonomous and manual drone challenges.",
-        image: "https://images.unsplash.com/photo-1546776310-eef45dd6d63c?q=80&w=1000&auto=format&fit=crop",
+        slug: "fpv-racing",
+        title: "FPV Racing Championship",
+        date: "May 2-3, 2026",
+        location: "JIIT Wish Town Campus",
+        description: "Pilots control high-performance racing drones using first-person-view (FPV) goggles. Navigate a high-speed race track with precision control and obstacle avoidance.",
+        image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=1000&auto=format&fit=crop",
         color: "primary",
-        category: "TECHNICAL",
+        category: "COMPETITION",
+        skillsTested: [
+            "High-speed drone piloting",
+            "Precision control through gates",
+            "Rapid reaction and spatial awareness",
+            "Race strategy and consistency"
+        ],
+        prizePool: {
+            total: "2,00,000",
+            first: "1,00,000",
+            second: "60,000",
+            third: "40,000"
+        },
+        timeline: {
+            day1: [
+                { time: "09:30 - 11:30", activity: "Qualifying Rounds" }
+            ],
+            day2: [
+                { time: "11:00 - 12:30", activity: "Semi-Finals and Finals" }
+            ]
+        }
     },
     {
-        slug: "takeoff",
-        title: "TAKEOFF",
-        date: "April 05, 2026",
-        location: "Cyber City Heights",
-        description: "This arena celebrates flight, control, and futuristic aerial maneuvers in a high-stakes environment.",
-        image: "https://images.unsplash.com/photo-1508614589041-895b9cb92736?q=80&w=1000&auto=format&fit=crop",
+        slug: "payload-delivery",
+        title: "Payload Delivery Mission",
+        date: "May 2-3, 2026",
+        location: "JIIT Wish Town Campus",
+        description: "Simulates real-world drone logistics. Navigate, visually identify the drop zone, and release payload accurately.",
+        image: "https://images.unsplash.com/photo-1521405617584-1d9867aecad3?q=80&w=1000&auto=format&fit=crop",
         color: "secondary",
-        category: "TECHNICAL",
+        category: "COMPETITION",
+        skillsTested: [
+            "Mission planning and navigation",
+            "Payload stabilization during flight",
+            "Visual marker detection",
+            "Accurate payload deployment",
+            "System integration"
+        ],
+        prizePool: {
+            total: "1,60,000",
+            first: "80,000",
+            second: "50,000",
+            third: "30,000"
+        },
+        timeline: {
+            day1: [
+                { time: "14:00 - 16:00", activity: "Preliminary Rounds" }
+            ],
+            day2: [
+                { time: "13:30 - 14:30", activity: "Finals" }
+            ]
+        }
     },
     {
-        slug: "software-corner",
-        title: "SOFTWARE CORNER",
-        date: "April 22, 2026",
-        location: "Grand Citadel",
-        description: "From rapid quantitative problem-solving to team-based software architecture challenges.",
-        image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1000&auto=format&fit=crop",
+        slug: "autonomous-mission",
+        title: "Autonomous Drone Mission",
+        date: "May 3, 2026",
+        location: "JIIT Wish Town Campus",
+        description: "Program your drone to complete mission stages without human control: autonomous takeoff, navigation, marker detection, and precision landing.",
+        image: "https://images.unsplash.com/photo-1473968512647-3e447244af8f?q=80&w=1000&auto=format&fit=crop",
         color: "accent",
-        category: "TECHNICAL",
+        category: "COMPETITION",
+        skillsTested: [
+            "Autonomous navigation",
+            "Computer vision and marker detection",
+            "Drone stabilization and control algorithms",
+            "Precision landing accuracy"
+        ],
+        prizePool: {
+            total: "1,60,000",
+            first: "80,000",
+            second: "50,000",
+            third: "30,000"
+        },
+        timeline: {
+            day2: [
+                { time: "09:00 - 11:00", activity: "Autonomous Drone Mission" }
+            ]
+        }
     },
     {
-        slug: "startup-expo",
-        title: "STARTUP EXPO",
-        date: "May 10, 2026",
-        location: "Innovation Hub",
-        description: "Showcase your entrepreneurial spirit and pitch to world-class investors.",
-        image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?q=80&w=1000&auto=format&fit=crop",
+        slug: "obstacle-navigation",
+        title: "Obstacle Navigation Challenge",
+        date: "May 2, 2026",
+        location: "JIIT Wish Town Campus",
+        description: "Focus on precise manual control. Guide your drone through challenging sequences like circular rings, staggered poles, and narrow corridors.",
+        image: "https://images.unsplash.com/photo-1506947411487-a56738267384?q=80&w=1000&auto=format&fit=crop",
         color: "yellow",
-        category: "ENTREPRENEURIAL",
+        category: "COMPETITION",
+        skillsTested: [
+            "Fine drone maneuvering",
+            "Controlled flight in confined spaces",
+            "Stability and throttle management",
+            "Precision landing capability"
+        ],
+        prizePool: {
+            total: "1,20,000",
+            first: "60,000",
+            second: "40,000",
+            third: "20,000"
+        },
+        timeline: {
+            day1: [
+                { time: "11:30 - 13:00", activity: "Obstacle Navigation Challenge" }
+            ]
+        }
     },
     {
-        slug: "misc-jam",
-        title: "DIVERSITY JAM",
-        date: "June 15, 2026",
-        location: "Common Grounds",
-        description: "A celebration of various non-technical talents and creative expressions.",
-        image: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=1000&auto=format&fit=crop",
+        slug: "drone-design",
+        title: "Drone Design & Innovation",
+        date: "May 2-3, 2026",
+        location: "JIIT Wish Town Campus",
+        description: "Present a drone design or prototype demonstrating innovation, technical advancement, or a novel application. Focus on engineering creativity.",
+        image: "https://images.unsplash.com/photo-1555626906-fcf10d6851b4?q=80&w=1000&auto=format&fit=crop",
         color: "cyan",
-        category: "MISCELLANEOUS",
-    },
+        category: "EXHIBITION",
+        skillsTested: [
+            "Engineering design",
+            "Innovation and creativity",
+            "System architecture and integration",
+            "Presentation and technical communication"
+        ],
+        prizePool: {
+            total: "1,20,000",
+            first: "50,000",
+            second: "30,000",
+            third: "20,000",
+            other: "Best Innovation Award: 40,000"
+        },
+        timeline: {
+            day1: [
+                { time: "16:00 - 17:00", activity: "Exhibition Setup" }
+            ],
+            day2: [
+                { time: "14:30 - 15:30", activity: "Presentations and Final Judging" }
+            ]
+        }
+    }
 ];

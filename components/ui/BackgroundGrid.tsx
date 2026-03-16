@@ -5,8 +5,18 @@ import { useEffect, useState } from "react";
 
 export function BackgroundGrid() {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const [mounted, setMounted] = useState(false);
+  const [particles] = useState(() => 
+    [...Array(20)].map(() => ({
+      x: Math.random() * 100 + "%",
+      y: Math.random() * 100 + "%",
+      duration: Math.random() * 10 + 10,
+      delay: Math.random() * 10,
+    }))
+  );
 
   useEffect(() => {
+    setMounted(true);
     const handleMouseMove = (e: MouseEvent) => {
       setMousePos({
         x: (e.clientX / window.innerWidth - 0.5) * 20,
@@ -16,6 +26,8 @@ export function BackgroundGrid() {
     window.addEventListener("mousemove", handleMouseMove);
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
+
+  if (!mounted) return <div className="fixed inset-0 z-0 bg-[#03030a]" />;
 
   return (
     <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden bg-[#03030a]">
@@ -60,23 +72,23 @@ export function BackgroundGrid() {
       />
 
       {/* Floating Particles */}
-      {[...Array(20)].map((_, i) => (
+      {particles.map((p, i) => (
         <motion.div
           key={i}
           className="absolute w-1 h-1 bg-white rounded-full opacity-20"
           initial={{
-            x: Math.random() * 100 + "%",
-            y: Math.random() * 100 + "%",
+            x: p.x,
+            y: p.y,
           }}
           animate={{
             y: [null, "-100%"],
             opacity: [0.2, 0.5, 0],
           }}
           transition={{
-            duration: Math.random() * 10 + 10,
+            duration: p.duration,
             repeat: Infinity,
             ease: "linear",
-            delay: Math.random() * 10,
+            delay: p.delay,
           }}
         />
       ))}

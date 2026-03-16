@@ -44,8 +44,8 @@ export function Specifications() {
           <SectionHeading glowColor="primary">SPECIFICATIONS</SectionHeading>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {specs.map((spec) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+          {specs.slice(0, 3).map((spec) => (
             <Card key={spec.id} className="p-8 flex flex-col items-start border-none relative group overflow-hidden bg-white/5 backdrop-blur-sm">
               <div 
                 className="absolute top-0 left-0 w-1 h-full transition-colors duration-500" 
@@ -59,8 +59,28 @@ export function Specifications() {
               </div>
               <h3 className="text-xl font-orbitron font-bold text-white mb-4 tracking-widest">{spec.title}</h3>
               <p className="text-white/60 font-mono text-xs leading-relaxed uppercase tracking-wide">{spec.desc}</p>
-              
-              {/* Subtle hover glow */}
+              <div 
+                className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 pointer-events-none"
+                style={{ background: `radial-gradient(circle at center, var(--color-${spec.color}), transparent)` }}
+              />
+            </Card>
+          ))}
+        </div>
+        <div className="flex flex-wrap justify-center gap-6">
+          {specs.slice(3).map((spec) => (
+            <Card key={spec.id} className="w-full md:w-[calc(50%-12px)] lg:w-[calc(33.33%-16px)] p-8 flex flex-col items-start border-none relative group overflow-hidden bg-white/5 backdrop-blur-sm">
+              <div 
+                className="absolute top-0 left-0 w-1 h-full transition-colors duration-500" 
+                style={{ backgroundColor: `var(--color-${spec.color})` }}
+              />
+              <div 
+                className="text-4xl font-mono opacity-10 font-bold mb-4 group-hover:opacity-30 transition-opacity"
+                style={{ color: `var(--color-${spec.color})` }}
+              >
+                [{spec.id}]
+              </div>
+              <h3 className="text-xl font-orbitron font-bold text-white mb-4 tracking-widest">{spec.title}</h3>
+              <p className="text-white/60 font-mono text-xs leading-relaxed uppercase tracking-wide">{spec.desc}</p>
               <div 
                 className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 pointer-events-none"
                 style={{ background: `radial-gradient(circle at center, var(--color-${spec.color}), transparent)` }}

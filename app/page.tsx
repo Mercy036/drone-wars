@@ -3,7 +3,6 @@ import { Hero } from "@/components/sections/Hero";
 import { AboutEvent } from "@/components/sections/AboutEvent";
 import { EventsSection } from "@/components/sections/EventsSection";
 import { Specifications } from "@/components/sections/Specifications";
-import { PastDrivers } from "@/components/sections/PastDrivers";
 import { FAQs } from "@/components/sections/FAQs";
 import { Prizes } from "@/components/sections/Prizes";
 import { RegistrationCTA } from "@/components/sections/RegistrationCTA";
@@ -19,10 +18,8 @@ export default function Home() {
       <AboutEvent />
       <EventsSection />
       <Specifications />
-      <PastDrivers />
       <FAQs />
       <Prizes />
-      <RegistrationCTA />
       <Footer />
     </main>
   );

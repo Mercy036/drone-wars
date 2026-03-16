@@ -19,17 +19,17 @@ export function Footer() {
             <div className="absolute -right-12 top-1/2 -translate-y-1/2 w-8 h-[1px] bg-[#00f0ff]/50" />
           </div>
           <div className="bg-white/90 px-10 py-4 rounded-sm">
-            <h1 className="text-4xl md:text-5xl font-bold tracking-tighter text-[#00205B]">AIRBUS</h1>
+            <h1 className="text-2xl md:text-3xl font-bold tracking-tighter text-[#00205B] text-center">JAYPEE INSTITUTE OF<br />INFORMATION TECHNOLOGY</h1>
           </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 font-sans mb-12">
           <div className="md:col-span-2">
             <Link href="#" className="inline-block mb-6">
-              <span className="text-3xl font-orbitron font-bold uppercase tracking-widest text-white">DRONE<span className="text-[#00f0ff] ml-1">WARS</span></span>
+              <span className="text-3xl font-orbitron font-bold uppercase tracking-widest text-white">DRONO<span className="text-[#00f0ff] ml-1">WAR</span></span>
             </Link>
             <p className="text-white/60 text-sm max-w-sm leading-relaxed font-mono">
-              The premier International FPV Drone Racing League pushing the boundaries of aerial motorsport.
+              National Drone Championship hosting multiple arenas of aerial and autonomous excellence.
             </p>
           </div>
           

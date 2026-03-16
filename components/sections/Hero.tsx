@@ -37,16 +37,15 @@ export function Hero() {
           </div>
 
           {/* Main Title Overhaul */}
-          <div className="relative mb-8">
+          <div className="relative mb-8 text-center w-full max-w-full mx-auto px-4 py-2">
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-              className="text-7xl md:text-[10rem] font-orbitron font-black text-white tracking-tighter leading-none"
+              className="text-4xl sm:text-6xl md:text-7xl lg:text-[7rem] xl:text-[8rem] font-orbitron font-black text-white tracking-widest leading-none"
             >
-              DRONE<br />
-              <span className="relative inline-block">
-                WARS
+              <span className="relative inline-block whitespace-nowrap">
+                DRON-O-WAR
                 <motion.div
                   initial={{ width: 0 }}
                   animate={{ width: "100%" }}
@@ -64,9 +63,10 @@ export function Hero() {
             transition={{ delay: 0.8, duration: 1 }}
             className="flex flex-col items-center gap-4 mb-16"
           >
-            <p className="text-white/40 font-mono text-xs uppercase tracking-[0.3em] max-w-lg leading-loose">
-              High Intensity FPV Racing. <br />
-              Custom Circuits. Elite Pilots. Zero Margin for Error.
+            <p className="text-white/80 font-mono text-sm uppercase tracking-[0.3em] max-w-lg leading-loose text-center">
+              National Drone Championship <br />
+              JIIT Wish Town Campus, Noida <br />
+              May 2-3, 2026
             </p>
             <div className="w-[1px] h-12 bg-gradient-to-b from-primary/50 to-transparent" />
           </motion.div>
@@ -78,12 +78,13 @@ export function Hero() {
             transition={{ delay: 1.2, duration: 0.6 }}
             className="flex flex-col sm:flex-row gap-8"
           >
-            <Button size="lg" className="h-16 px-12 text-sm tracking-[0.2em] font-orbitron font-bold relative group overflow-hidden bg-white text-black hover:text-white border-none rounded-none transition-colors duration-500">
+            <Button 
+              size="lg" 
+              onClick={() => document.getElementById('events')?.scrollIntoView({ behavior: 'smooth' })}
+              className="h-16 px-12 text-sm tracking-[0.2em] font-orbitron font-bold relative group overflow-hidden bg-white text-black hover:text-white border-none rounded-none transition-colors duration-500"
+            >
               <span className="relative z-10">ENTER ARENA</span>
               <div className="absolute inset-0 bg-primary translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
-            </Button>
-            <Button size="lg" variant="outline" className="h-16 px-12 text-sm tracking-[0.2em] font-orbitron font-bold rounded-none border-white/10 hover:bg-white/5 transition-all text-white/60 hover:text-white">
-              SQUAD REGISTRY
             </Button>
           </motion.div>
         </div>

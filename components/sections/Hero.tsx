@@ -66,7 +66,7 @@ export function Hero() {
                 National Drone Championship
               </p>
               <p className="text-white/70 font-mono text-[9px] md:text-xs uppercase tracking-[0.15em]">
-                JIIT Wish Town Campus, Noida
+                Jaypee Institute of Information Technology, Noida
               </p>
             </div>
 

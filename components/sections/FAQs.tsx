@@ -18,7 +18,7 @@ export function FAQs() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="py-24 relative overflow-hidden">
+    <section id="faq" className="py-24 relative overflow-hidden">
       <div className="container mx-auto px-4 z-10 max-w-4xl">
         <div className="flex justify-center mb-16">
           <SectionHeading glowColor="primary">FAQs</SectionHeading>

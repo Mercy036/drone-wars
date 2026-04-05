@@ -181,11 +181,19 @@ export function BrochurePopup() {
                 </motion.div>
               </div>
 
-              <div className="flex justify-center pt-7">
+              <div className="flex flex-col sm:flex-row justify-center gap-3 pt-7">
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLScIvVbyRIGsxU_j0lq65Iq6iGgTuINPF_o8Ti9IqIUOnCwtaw/viewform?usp=dialog"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-8 py-3.5 border border-[#00f0ff]/60 bg-[linear-gradient(150deg,rgba(0,240,255,0.28),rgba(0,240,255,0.12))] text-[#d8fcff] text-xs md:text-sm font-orbitron tracking-[0.2em] uppercase hover:bg-[linear-gradient(150deg,rgba(0,240,255,0.4),rgba(0,240,255,0.2))] hover:text-white transition-colors shadow-[0_0_22px_rgba(0,240,255,0.28)]"
+                >
+                  Register Now
+                </a>
                 <button
                   type="button"
                   onClick={() => setOpen(false)}
-                  className="px-10 py-3.5 border border-[#ff4d00]/55 bg-[linear-gradient(150deg,rgba(255,77,0,0.24),rgba(255,77,0,0.1))] text-[#ffe4da] text-xs md:text-sm font-orbitron tracking-[0.24em] uppercase hover:bg-[linear-gradient(150deg,rgba(255,77,0,0.34),rgba(255,77,0,0.16))] hover:text-white transition-colors shadow-[0_0_18px_rgba(255,77,0,0.2)]"
+                  className="px-8 py-3.5 border border-[#ff4d00]/55 bg-[linear-gradient(150deg,rgba(255,77,0,0.24),rgba(255,77,0,0.1))] text-[#ffe4da] text-xs md:text-sm font-orbitron tracking-[0.2em] uppercase hover:bg-[linear-gradient(150deg,rgba(255,77,0,0.34),rgba(255,77,0,0.16))] hover:text-white transition-colors shadow-[0_0_18px_rgba(255,77,0,0.2)]"
                 >
                   Enter Arena
                 </button>

@@ -99,6 +99,30 @@ export function Footer() {
           <p className="text-[10px] font-mono tracking-[0.2em] text-white/40 uppercase">
             Made with love by <span className="text-primary italic">Ansh Shourya</span> and <span className="text-accent italic">vardan</span> ❤️
           </p>
+          <p className="inline-flex flex-wrap items-center justify-center gap-2 rounded-full border border-[#00f0ff]/35 bg-[linear-gradient(135deg,rgba(0,240,255,0.10),rgba(255,122,66,0.12))] px-4 py-2 text-[11px] sm:text-xs font-orbitron tracking-[0.08em] text-white/90 shadow-[0_0_30px_rgba(0,240,255,0.12)]">
+            <span className="text-white/75">Made with</span>
+            <span className="text-[#ff5f7a] animate-pulse">❤️</span>
+            <span className="text-white/75">by</span>
+            <a
+              href="https://www.linkedin.com/in/ansh-mahajan-46115a267/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-transparent bg-clip-text bg-[linear-gradient(90deg,#00f0ff_0%,#7fffe8_45%,#ff9f66_100%)] hover:brightness-125 transition"
+            >
+              Ansh Mahajan
+            </a>
+            <span className="text-white/60">|</span>
+            <span className="text-transparent bg-clip-text bg-[linear-gradient(90deg,#00f0ff_0%,#7fffe8_45%,#ff9f66_100%)]">Shourya Singh</span>
+            <span className="text-white/60">|</span>
+            <a
+              href="https://www.linkedin.com/in/vardaan-saxena-b4b4a4365/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-transparent bg-clip-text bg-[linear-gradient(90deg,#00f0ff_0%,#7fffe8_45%,#ff9f66_100%)] hover:brightness-125 transition"
+            >
+              Vardaan Saxena
+            </a>
+          </p>
         </div>
       </div>
     </footer>

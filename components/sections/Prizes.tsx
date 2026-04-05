@@ -7,35 +7,37 @@ import { Card } from "@/components/ui/Card";
 
 export function Prizes() {
   return (
-    <section id="prizes" className="py-24 relative overflow-hidden bg-[#03030a]">
+    <section id="prizes" className="py-14 md:py-16 relative overflow-hidden bg-[#03030a]">
       <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_18%_22%,rgba(0,240,255,0.14),transparent_42%),radial-gradient(circle_at_82%_18%,rgba(255,77,0,0.14),transparent_40%)]" />
       <div className="container mx-auto px-4 z-10 text-center relative">
         <SectionHeading glowColor="primary">PRIZE POOL</SectionHeading>
-        
+
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-120px" }}
           transition={{ duration: 0.6 }}
-          className="mt-12 mb-20 relative"
+          className="mt-6 mb-8 relative"
         >
-          <div className="mx-auto mb-6 inline-flex items-center gap-2 border border-[#00f0ff]/40 bg-[#00f0ff]/10 px-4 py-1.5 text-[10px] font-mono tracking-[0.2em] uppercase text-[#c8fcff]">
-            <Trophy className="h-3.5 w-3.5 text-[#00f0ff]" />
-            Championship Reward Matrix
-            <Sparkles className="h-3.5 w-3.5 text-[#ffb08a]" />
+          <div className="mx-auto mb-5 flex flex-col md:flex-col lg:flex-row items-center justify-center gap-3 md:gap-4">
+            <div className="inline-flex items-center gap-2 border border-[#00f0ff]/40 bg-[#00f0ff]/10 px-4 py-1.5 text-[10px] font-mono tracking-[0.2em] uppercase text-[#c8fcff]">
+              <Trophy className="h-3.5 w-3.5 text-[#00f0ff]" />
+              Championship Reward Matrix
+              <Sparkles className="h-3.5 w-3.5 text-[#ffb08a]" />
+            </div>
+
+            <motion.h2
+              animate={{ textShadow: ["0 0 0 rgba(0,240,255,0)", "0 0 30px rgba(0,240,255,0.2)", "0 0 0 rgba(0,240,255,0)"] }}
+              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+              className="text-4xl md:text-6xl lg:text-7xl font-orbitron font-black text-white tracking-tighter uppercase relative inline-block whitespace-nowrap leading-none"
+            >
+              ₹8 LAKHS
+              <div className="absolute top-1/2 left-0 w-full h-[1px] bg-white/20 -translate-y-1/2" />
+            </motion.h2>
           </div>
 
-          <motion.h2
-            animate={{ textShadow: ["0 0 0 rgba(0,240,255,0)", "0 0 30px rgba(0,240,255,0.2)", "0 0 0 rgba(0,240,255,0)"] }}
-            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-            className="text-6xl md:text-8xl lg:text-9xl font-orbitron font-black text-white tracking-tighter uppercase relative inline-block"
-          >
-            ₹8 LAKHS
-            <div className="absolute top-1/2 left-0 w-full h-[1px] bg-white/20 -translate-y-1/2" />
-          </motion.h2>
-
-          <p className="text-sm md:text-base text-[#00f0ff] font-mono tracking-[0.3em] mt-6 uppercase">Total Cash Prizes // Across 5 Events</p>
-          <div className="mx-auto mt-4 h-px w-52 bg-gradient-to-r from-transparent via-[#ff4d00]/70 to-transparent" />
+          <p className="text-xs md:text-sm text-[#00f0ff] font-mono tracking-[0.24em] mt-4 uppercase">Total Cash Prizes // Across 5 Events</p>
+          <div className="mx-auto mt-3 h-px w-44 bg-gradient-to-r from-transparent via-[#ff4d00]/70 to-transparent" />
         </motion.div>
 
         <motion.div

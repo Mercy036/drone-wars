@@ -27,7 +27,7 @@ export function AboutEvent() {
               transition={{ duration: 0.45 }}
               className="relative z-10 mb-4 inline-flex items-center gap-2 border border-[#00f0ff]/35 bg-[#00f0ff]/10 px-3 py-1"
             >
-              <span className="text-[10px] md:text-xs font-mono tracking-[0.28em] uppercase text-[#bffbff]">International FPV Championship</span>
+              <span className="text-[10px] md:text-xs font-mono tracking-[0.28em] uppercase text-[#bffbff]">National FPV Championship</span>
             </motion.div>
 
             <motion.h3
@@ -48,7 +48,7 @@ export function AboutEvent() {
               transition={{ duration: 0.55, delay: 0.12 }}
               className="relative z-10 mx-auto mb-6 max-w-4xl text-xs md:text-sm text-white/78 font-mono tracking-wide leading-relaxed"
             >
-              DRONOWAR at Jaypee Institute of Information Technology, Noida brings world-class FPV competition, DRDO scientist talks, advanced demonstrations, and mission-grade race formats into one high-energy international arena.
+              DRONOWAR at Jaypee Institute of Information Technology, Sector 128 Noida brings world-class FPV competition, DRDO scientist talks, advanced demonstrations, and mission-grade race formats into one high-energy national arena.
             </motion.p>
 
             <div className="relative z-10 mb-6 flex justify-center text-left">
@@ -62,6 +62,14 @@ export function AboutEvent() {
             </div>
 
             <div className="relative z-10 flex flex-col sm:flex-row sm:items-center gap-3 justify-center">
+              <Button
+                size="sm"
+                variant="primary"
+                className="w-full sm:w-auto sm:min-w-[220px] border-[#00ffb3]/45 text-[#bfffea] hover:border-[#00ffb3] hover:bg-[#00ffb3]/12 shadow-[0_0_18px_rgba(0,255,179,0.18)]"
+                onClick={() => window.open("https://docs.google.com/forms/d/e/1FAIpQLScIvVbyRIGsxU_j0lq65Iq6iGgTuINPF_o8Ti9IqIUOnCwtaw/viewform?usp=dialog", "_blank", "noopener,noreferrer")}
+              >
+                REGISTER NOW
+              </Button>
               <Button
                 size="sm"
                 variant="outline"

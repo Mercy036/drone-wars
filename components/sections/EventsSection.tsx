@@ -257,17 +257,9 @@ export function EventsSection() {
                        <div className="text-3xl font-light text-[#00f0ff] mb-6 tracking-tight">
                          ₹{selectedEvent.prizePool.total}
                        </div>
-                       <div className="space-y-3 font-mono text-xs text-white/70">
-                         <div className="flex justify-between border-b border-white/10 pb-2">
-                           <span>1ST</span><span className="text-white">₹{selectedEvent.prizePool.first}</span>
-                         </div>
-                         <div className="flex justify-between border-b border-white/10 pb-2">
-                           <span>2ND</span><span className="text-white">₹{selectedEvent.prizePool.second}</span>
-                         </div>
-                         <div className="flex justify-between border-b border-white/10 pb-2">
-                           <span>3RD</span><span className="text-white">₹{selectedEvent.prizePool.third}</span>
-                         </div>
-                       </div>
+                       <p className="font-mono text-xs text-white/60 uppercase tracking-[0.16em]">
+                         Total Prize Pool
+                       </p>
                     </div>
                     
                     {/* Timeline Column */}

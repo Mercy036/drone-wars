@@ -1,8 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/Button";
-
 export function Hero() {
   return (
     <section className="relative h-screen md:h-[100dvh] flex items-center justify-center overflow-hidden">
@@ -13,7 +11,7 @@ export function Hero() {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="mt-16 md:mt-20 mb-3 md:mb-4 px-4 md:px-6 py-1.5 md:py-2 border border-white/10 bg-black/40 text-[8px] md:text-[10px] font-mono tracking-[0.3em] md:tracking-[0.4em] uppercase text-white/70 flex items-center gap-2 md:gap-3 hover:border-primary/50 transition-colors"
+            className="mt-20 md:mt-24 mb-1 md:mb-2 px-4 md:px-6 py-1.5 md:py-2 border border-white/10 bg-black/40 text-[8px] md:text-[10px] font-mono tracking-[0.3em] md:tracking-[0.4em] uppercase text-white/70 flex items-center gap-2 md:gap-3 hover:border-primary/50 transition-colors"
           >
             <div className="flex gap-1">
               {[...Array(3)].map((_, i) => (
@@ -53,7 +51,7 @@ export function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1, duration: 1 }}
-            className="flex flex-col items-center gap-3 md:gap-4 mb-6 md:mb-8"
+            className="flex flex-col items-center gap-2 md:gap-3 mb-3 md:mb-4"
           >
             <div className="w-[1px] h-4 md:h-6 bg-gradient-to-b from-transparent via-primary to-transparent" />
             
@@ -66,7 +64,7 @@ export function Hero() {
                 National Drone Championship
               </p>
               <p className="text-white/70 font-mono text-[9px] md:text-xs uppercase tracking-[0.15em]">
-                Jaypee Institute of Information Technology, Noida
+                Jaypee Institute of Information Technology, Sector 128 Noida
               </p>
             </div>
 
@@ -82,7 +80,23 @@ export function Hero() {
               </p>
             </motion.div>
 
-            <div className="w-[1px] h-4 md:h-6 bg-gradient-to-b from-transparent via-primary to-transparent" />
+            <motion.div
+              initial={{ opacity: 0, y: 6 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.2, duration: 0.6 }}
+              className="relative"
+            >
+              <p className="text-[9px] md:text-[10px] font-mono tracking-[0.25em] uppercase text-white/55 mb-1">Prize Pool</p>
+              <motion.p
+                animate={{ textShadow: ["0 0 0 rgba(0,240,255,0)", "0 0 28px rgba(0,240,255,0.45)", "0 0 0 rgba(0,240,255,0)"] }}
+                transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut" }}
+                className="text-3xl sm:text-4xl md:text-6xl font-orbitron font-black tracking-[0.08em] text-transparent bg-clip-text bg-[linear-gradient(90deg,#00f0ff_0%,#ffffff_42%,#ff9f66_100%)]"
+              >
+                ₹ 8,00,000 INR
+              </motion.p>
+            </motion.div>
+
+            <div className="w-[1px] h-2 md:h-3 bg-gradient-to-b from-transparent via-primary to-transparent" />
           </motion.div>
 
           {/* Premium Championship CTA */}
@@ -95,19 +109,38 @@ export function Hero() {
             <div className="text-center text-[8px] md:text-[10px] font-mono tracking-[0.25em] uppercase text-white/50">
               Register Now For The Championship
             </div>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.98 }}
-              onClick={() => document.getElementById('events')?.scrollIntoView({ behavior: 'smooth' })}
-              className="relative group overflow-hidden px-8 md:px-12 py-2.5 md:py-3 bg-gradient-to-r from-primary to-accent text-black font-orbitron font-bold text-xs md:text-sm tracking-[0.15em] uppercase shadow-[0_0_30px_rgba(0,240,255,0.4)] hover:shadow-[0_0_50px_rgba(0,240,255,0.6)] transition-all duration-300"
-            >
-              <span className="relative z-10">Enter Arena</span>
-              <motion.div
-                className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20"
-                initial={false}
-              />
-            </motion.button>
-            <div className="text-[8px] font-mono tracking-[0.15em] uppercase text-white/40">
+            <div className="flex flex-col sm:flex-row items-center gap-2.5">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.98 }}
+                onClick={() => window.open("https://docs.google.com/forms/d/e/1FAIpQLScIvVbyRIGsxU_j0lq65Iq6iGgTuINPF_o8Ti9IqIUOnCwtaw/viewform?usp=dialog", "_blank", "noopener,noreferrer")}
+                className="relative group overflow-hidden px-6 md:px-8 py-2 md:py-2.5 border border-[#7dffe4]/70 bg-[linear-gradient(95deg,#00f0ff_0%,#59ffd0_46%,#00ffb3_100%)] text-[#021018] font-orbitron font-black text-[11px] md:text-xs tracking-[0.17em] uppercase shadow-[0_0_36px_rgba(0,255,179,0.45),inset_0_1px_0_rgba(255,255,255,0.45)] hover:shadow-[0_0_62px_rgba(0,255,179,0.72),inset_0_1px_0_rgba(255,255,255,0.6)] transition-all duration-300"
+              >
+                <span className="relative z-10 flex items-center gap-2">
+                  <span className="h-1.5 w-1.5 rounded-full bg-[#08322b]" />
+                  Register Now
+                </span>
+                <motion.div
+                  className="pointer-events-none absolute inset-y-0 -left-1/3 w-1/3 bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.8),transparent)]"
+                  initial={{ x: "-130%" }}
+                  animate={{ x: "320%" }}
+                  transition={{ duration: 2.1, repeat: Infinity, ease: "linear" }}
+                />
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.98 }}
+                onClick={() => document.getElementById('events')?.scrollIntoView({ behavior: 'smooth' })}
+                className="relative group overflow-hidden px-6 md:px-8 py-2 md:py-2.5 border border-primary/60 bg-black/30 text-primary font-orbitron font-bold text-[11px] md:text-xs tracking-[0.15em] uppercase shadow-[0_0_24px_rgba(0,240,255,0.22)] hover:text-white hover:border-primary transition-all duration-300"
+              >
+                <span className="relative z-10">Enter Arena</span>
+                <motion.div
+                  className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100"
+                  initial={false}
+                />
+              </motion.button>
+            </div>
+            <div className="mt-1 text-[9px] font-mono tracking-[0.15em] uppercase text-white/55">
               Limited Slots Available
             </div>
           </motion.div>

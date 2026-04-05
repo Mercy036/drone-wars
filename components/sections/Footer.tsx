@@ -87,12 +87,36 @@ export function Footer() {
           </div>
         </div>
         
-        <div className="text-center py-6 border-t border-white/10">
+        <div className="text-center py-6 border-t border-white/10 space-y-3">
           <p className="inline-flex flex-wrap items-center justify-center gap-1 rounded-full border border-[#00f0ff]/30 bg-[linear-gradient(120deg,rgba(0,240,255,0.15),rgba(129,255,227,0.12),rgba(255,138,75,0.18))] px-5 py-2 text-[11px] sm:text-xs font-orbitron tracking-[0.14em] uppercase shadow-[0_0_28px_rgba(0,240,255,0.2)]">
             <span className="text-[#b9ffff]">&copy; 2026</span>
             <span className="text-white">DronoWars</span>
             <span className="text-[#ffd0b3]">JIIT Noida.</span>
             <span className="text-[#aef0ff]">All rights reserved.</span>
+          </p>
+          <p className="inline-flex flex-wrap items-center justify-center gap-2 rounded-full border border-[#00f0ff]/35 bg-[linear-gradient(135deg,rgba(0,240,255,0.10),rgba(255,122,66,0.12))] px-4 py-2 text-[11px] sm:text-xs font-orbitron tracking-[0.08em] text-white/90 shadow-[0_0_30px_rgba(0,240,255,0.12)]">
+            <span className="text-white/75">Made with</span>
+            <span className="text-[#ff5f7a] animate-pulse">❤️</span>
+            <span className="text-white/75">by</span>
+            <a
+              href="https://www.linkedin.com/in/ansh-mahajan-46115a267/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-transparent bg-clip-text bg-[linear-gradient(90deg,#00f0ff_0%,#7fffe8_45%,#ff9f66_100%)] hover:brightness-125 transition"
+            >
+              Ansh Mahajan
+            </a>
+            <span className="text-white/60">|</span>
+            <span className="text-transparent bg-clip-text bg-[linear-gradient(90deg,#00f0ff_0%,#7fffe8_45%,#ff9f66_100%)]">Shourya Singh</span>
+            <span className="text-white/60">|</span>
+            <a
+              href="https://www.linkedin.com/in/vardaan-saxena-b4b4a4365/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-transparent bg-clip-text bg-[linear-gradient(90deg,#00f0ff_0%,#7fffe8_45%,#ff9f66_100%)] hover:brightness-125 transition"
+            >
+              Vardaan Saxena
+            </a>
           </p>
         </div>
       </div>

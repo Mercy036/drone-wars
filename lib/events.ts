@@ -40,10 +40,10 @@ export const events: Event[] = [
             "Race strategy and consistency"
         ],
         prizePool: {
-            total: "2,00,000",
-            first: "1,00,000",
-            second: "60,000",
-            third: "40,000"
+            total: "TBD",
+            first: "TBD",
+            second: "TBD",
+            third: "TBD"
         },
         timeline: {
             day1: [
@@ -71,10 +71,10 @@ export const events: Event[] = [
             "System integration"
         ],
         prizePool: {
-            total: "1,60,000",
-            first: "80,000",
-            second: "50,000",
-            third: "30,000"
+            total: "TBD",
+            first: "TBD",
+            second: "TBD",
+            third: "TBD"
         },
         timeline: {
             day1: [
@@ -101,10 +101,10 @@ export const events: Event[] = [
             "Precision landing accuracy"
         ],
         prizePool: {
-            total: "1,60,000",
-            first: "80,000",
-            second: "50,000",
-            third: "30,000"
+            total: "TBD",
+            first: "TBD",
+            second: "TBD",
+            third: "TBD"
         },
         timeline: {
             day2: [
@@ -128,10 +128,10 @@ export const events: Event[] = [
             "Precision landing capability"
         ],
         prizePool: {
-            total: "1,20,000",
-            first: "60,000",
-            second: "40,000",
-            third: "20,000"
+            total: "TBD",
+            first: "TBD",
+            second: "TBD",
+            third: "TBD"
         },
         timeline: {
             day1: [

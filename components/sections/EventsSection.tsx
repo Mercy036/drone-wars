@@ -103,6 +103,14 @@ export function EventsSection() {
                         {event.description.length > 80 ? event.description.substring(0, 80) + "..." : event.description}
                       </p>
                     </div>
+                    <div className="mt-5 flex flex-col items-start gap-1">
+                      <button disabled className="px-6 py-2 border border-white/20 bg-black/50 text-white/50 text-[10px] font-mono tracking-widest uppercase cursor-not-allowed z-20 backdrop-blur-sm pointer-events-auto">
+                        Rulebook
+                      </button>
+                      <span className="text-[8px] font-mono text-white/40 uppercase tracking-widest pl-1">
+                        Revealed by 8th April 2026
+                      </span>
+                    </div>
                   </div>
 
                   {/* Subtle Border Glow */}
@@ -156,6 +164,14 @@ export function EventsSection() {
                       <p className="text-xs font-mono text-white/60 uppercase tracking-[0.15em] leading-loose">
                         {event.description.length > 80 ? event.description.substring(0, 80) + "..." : event.description}
                       </p>
+                    </div>
+                    <div className="mt-5 flex flex-col items-start gap-1">
+                      <button disabled className="px-6 py-2 border border-white/20 bg-black/50 text-white/50 text-[10px] font-mono tracking-widest uppercase cursor-not-allowed z-20 backdrop-blur-sm pointer-events-auto">
+                        Rulebook
+                      </button>
+                      <span className="text-[8px] font-mono text-white/40 uppercase tracking-widest pl-1">
+                        Revealed by 8th April 2026
+                      </span>
                     </div>
                   </div>
                   <div className="absolute inset-0 border border-white/0 group-hover:border-white/10 transition-colors pointer-events-none" />
@@ -286,15 +302,26 @@ export function EventsSection() {
                   
                   <div className="mt-9 flex-1 grid grid-cols-1 lg:grid-cols-[1.12fr_0.88fr] gap-6 lg:gap-8 items-stretch">
                     {/* Prize Column */}
-                      <div className="flex flex-col justify-center">
-                       <h3 className="font-mono text-xs tracking-[0.24em] text-[#ffe0cf] uppercase mb-5">Prize Pool</h3>
-                        <div className="w-full max-w-full whitespace-nowrap text-[clamp(2rem,5.4vw,3.2rem)] leading-none font-light text-transparent bg-clip-text bg-[linear-gradient(90deg,#00f0ff_0%,#84fff0_45%,#ffab7b_100%)] mb-3 tracking-normal drop-shadow-[0_0_18px_rgba(0,240,255,0.18)]">
-                         ₹{selectedEvent.prizePool.total}
+                      <div className="flex flex-col justify-center gap-6">
+                        <div>
+                         <h3 className="font-mono text-xs tracking-[0.24em] text-[#ffe0cf] uppercase mb-5">Prize Pool</h3>
+                          <div className="w-full max-w-full whitespace-nowrap text-[clamp(2rem,5.4vw,3.2rem)] leading-none font-light text-transparent bg-clip-text bg-[linear-gradient(90deg,#00f0ff_0%,#84fff0_45%,#ffab7b_100%)] mb-3 tracking-normal drop-shadow-[0_0_18px_rgba(0,240,255,0.18)]">
+                           ₹{selectedEvent.prizePool.total}
+                         </div>
+                         <p className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-black/25 px-3 py-2 font-mono text-[10px] text-white/80 uppercase tracking-[0.16em]">
+                           <span className="h-1.5 w-1.5 rounded-full bg-[#00f0ff]" />
+                           Total Prize Pool
+                         </p>
+                        </div>
+                        
+                        <div className="flex flex-col items-start gap-2 pt-5 border-t border-white/10">
+                          <button disabled className="px-8 py-3.5 border border-white/20 bg-white/5 text-white/50 text-xs font-mono tracking-widest uppercase cursor-not-allowed transition-colors">
+                            RULEBOOK
+                          </button>
+                          <span className="text-[10px] font-mono text-white/40 uppercase tracking-widest pl-1">
+                            Revealed by 8th April 2026
+                          </span>
                        </div>
-                       <p className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-black/25 px-3 py-2 font-mono text-[10px] text-white/80 uppercase tracking-[0.16em]">
-                         <span className="h-1.5 w-1.5 rounded-full bg-[#00f0ff]" />
-                         Total Prize Pool
-                       </p>
                     </div>
                     
                     {/* Timeline Column */}

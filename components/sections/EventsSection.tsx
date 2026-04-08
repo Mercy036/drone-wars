@@ -1,4 +1,4 @@
-"use client";
+  "use client";
 
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { events, Event } from "@/lib/events";

@@ -147,19 +147,12 @@ export function ContactUs() {
               whileHover={{ y: -6 }}
             >
               <Card className="p-4 border-[#00f0ff]/35 bg-[linear-gradient(160deg,rgba(0,240,255,0.08),rgba(0,0,0,0.45))]">
-                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3">
-                  <div>
-                    <p className="text-[10px] font-mono tracking-[0.2em] uppercase text-[#00f0ff] mb-2">Coordinator</p>
-                    <h3 className="text-lg md:text-xl lg:text-2xl font-orbitron text-white whitespace-nowrap">Yasharth Singh</h3>
+                  <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3">
+                    <div>
+                      <p className="text-[10px] font-mono tracking-[0.2em] uppercase text-[#00f0ff] mb-2">Coordinator</p>
+                      <h3 className="text-lg md:text-xl lg:text-2xl font-orbitron text-white whitespace-nowrap">Yasharth Singh</h3>
+                    </div>
                   </div>
-                  <a
-                    href="tel:+918448173449"
-                    className="inline-flex items-center gap-2 border border-[#00f0ff]/45 px-3 py-2 text-[#00f0ff] hover:text-white hover:bg-[#00f0ff]/15 transition-colors"
-                  >
-                    <Phone className="h-4 w-4" />
-                    <span className="font-mono text-sm">+91 8448173449</span>
-                  </a>
-                </div>
               </Card>
             </motion.div>
 
@@ -171,19 +164,12 @@ export function ContactUs() {
               whileHover={{ y: -6 }}
             >
               <Card className="p-4 border-[#ff4d00]/35 bg-[linear-gradient(160deg,rgba(255,77,0,0.08),rgba(0,0,0,0.45))]">
-                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3">
-                  <div>
-                    <p className="text-[10px] font-mono tracking-[0.2em] uppercase text-[#ffb08a] mb-2">Coordinator</p>
-                    <h3 className="text-lg md:text-xl lg:text-2xl font-orbitron text-white whitespace-nowrap">Vaibhav Katariya</h3>
+                  <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3">
+                    <div>
+                      <p className="text-[10px] font-mono tracking-[0.2em] uppercase text-[#ffb08a] mb-2">Coordinator</p>
+                      <h3 className="text-lg md:text-xl lg:text-2xl font-orbitron text-white whitespace-nowrap">Vaibhav Katariya</h3>
+                    </div>
                   </div>
-                  <a
-                    href="tel:+917015000239"
-                    className="inline-flex items-center gap-2 border border-[#ff4d00]/45 px-3 py-2 text-[#ffb08a] hover:text-white hover:bg-[#ff4d00]/15 transition-colors"
-                  >
-                    <Phone className="h-4 w-4" />
-                    <span className="font-mono text-sm">+91 7015000239</span>
-                  </a>
-                </div>
               </Card>
             </motion.div>
           </div>

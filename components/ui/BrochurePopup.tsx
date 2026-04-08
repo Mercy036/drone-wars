@@ -230,15 +230,13 @@ export function BrochurePopup() {
                   <div className="space-y-3 text-sm text-white/85">
                     <div className="flex items-center gap-2">
                       <Mail className="h-4 w-4 text-[#00f0ff]" />
-                      <span>contact@dronotics.in</span>
+                      <span>support@dronotics.in</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <Phone className="h-4 w-4 text-[#00ff66]" />
-                      <span className="whitespace-nowrap text-xs md:text-sm">Yasharth Singh: +91 8448173449</span>
+                      <span className="whitespace-nowrap text-xs md:text-sm">Yasharth Singh</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <Phone className="h-4 w-4 text-[#00ff66]" />
-                      <span className="whitespace-nowrap text-xs md:text-sm">Vaibhav Katariya: +91 7015000239</span>
+                      <span className="whitespace-nowrap text-xs md:text-sm">Vaibhav Katariya</span>
                     </div>
                     <a
                       href="https://maps.google.com/?q=Jaypee+Institute+of+Information+Technology+Sector+128+Noida"

@@ -87,12 +87,20 @@ export function EventClientPage({ event }: { event: Event }) {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
-              className="flex items-center gap-6"
+              className="flex flex-wrap items-center gap-6"
             >
               <Button size="lg" className="px-12" style={{ backgroundColor: `var(--color-${event.color})` }}>
                 REGISTER AS PILOT
               </Button>
-              <button className="p-4 border border-white/10 hover:bg-white/5 transition-colors text-white/60 hover:text-white">
+              <div className="flex flex-col items-center">
+                <Button size="lg" disabled className="px-12 border border-white/20 bg-white/5 text-white/50 cursor-not-allowed">
+                  RULEBOOK
+                </Button>
+                <span className="text-[10px] font-mono text-white/50 mt-1.5 uppercase tracking-widest text-center">
+                  Revealed by 8th April 2026
+                </span>
+              </div>
+              <button className="p-4 border border-white/10 hover:bg-white/5 transition-colors text-white/60 hover:text-white shrink-0">
                 <Share2 size={24} />
               </button>
             </motion.div>

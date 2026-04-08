@@ -28,7 +28,7 @@ export const events: Event[] = [
         title: "FPV Racing Championship",
         date: "May 2-3, 2026",
         location: "JIIT Wish Town Campus",
-        description: "Pilots control high-performance racing drones using first-person-view (FPV) goggles. Navigate a high-speed race track with precision control and obstacle avoidance.",
+        description: "Fpv will be racing event with obstacles for both drone with goggles and LOS \n\nShortest leap time will be recorded",
         longDescription: "An FPV Drone Racing Challenge is a high-intensity competition that puts a pilot's ability to the test as they navigate their drone through a fast-paced obstacle course. The event is crafted to showcase precision in control, rapid decision-making, agility, spatial awareness, and sharp reflexes in dynamic, real-world racing conditions.\n\nTo ensure fairness and technical merit, only custom-built multi-rotor drones are allowed. Ready-to-Fly (RTF) commercially purchased drones are strictly prohibited.",
         image: "/event-fpv-racing.jpg",
         color: "primary",
@@ -40,10 +40,10 @@ export const events: Event[] = [
             "Race strategy and consistency"
         ],
         prizePool: {
-            total: "2,00,000",
-            first: "1,00,000",
-            second: "60,000",
-            third: "40,000"
+            total: "TBD",
+            first: "TBD",
+            second: "TBD",
+            third: "TBD"
         },
         timeline: {
             day1: [
@@ -71,10 +71,10 @@ export const events: Event[] = [
             "System integration"
         ],
         prizePool: {
-            total: "1,60,000",
-            first: "80,000",
-            second: "50,000",
-            third: "30,000"
+            total: "TBD",
+            first: "TBD",
+            second: "TBD",
+            third: "TBD"
         },
         timeline: {
             day1: [
@@ -101,10 +101,10 @@ export const events: Event[] = [
             "Precision landing accuracy"
         ],
         prizePool: {
-            total: "1,60,000",
-            first: "80,000",
-            second: "50,000",
-            third: "30,000"
+            total: "TBD",
+            first: "TBD",
+            second: "TBD",
+            third: "TBD"
         },
         timeline: {
             day2: [
@@ -113,8 +113,8 @@ export const events: Event[] = [
         }
     },
     {
-        slug: "obstacle-navigation",
-        title: "Obstacle Navigation Challenge",
+        slug: "RC Plane ",
+        title: "RC Plane",
         date: "May 2, 2026",
         location: "JIIT Wish Town Campus",
         description: "Focus on precise manual control. Guide your drone through challenging sequences like circular rings, staggered poles, and narrow corridors.",
@@ -128,14 +128,14 @@ export const events: Event[] = [
             "Precision landing capability"
         ],
         prizePool: {
-            total: "1,20,000",
-            first: "60,000",
-            second: "40,000",
-            third: "20,000"
+            total: "TBD",
+            first: "TBD",
+            second: "TBD",
+            third: "TBD"
         },
         timeline: {
             day1: [
-                { time: "11:30 - 13:00", activity: "Obstacle Navigation Challenge" }
+                { time: "11:30 - 13:00", activity: "RC Plane" }
             ]
         }
     },

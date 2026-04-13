@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Event } from "@/lib/events";
 import { Button } from "@/components/ui/Button";
 import Link from "next/link";
-import { ArrowLeft, Calendar, MapPin, Share2 } from "lucide-react";
+import { ArrowLeft, Calendar, MapPin, Share2, FileText } from "lucide-react";
 import { CacheCleanButton } from "@/components/ui/CacheCleanButton";
 
 export function EventClientPage({ event }: { event: Event }) {
@@ -92,15 +92,38 @@ export function EventClientPage({ event }: { event: Event }) {
               <Button size="lg" className="px-12" style={{ backgroundColor: `var(--color-${event.color})` }}>
                 REGISTER AS PILOT
               </Button>
-              <div className="flex flex-col items-center">
-                <Button size="lg" disabled className="px-12 border border-white/20 bg-white/5 text-white/50 cursor-not-allowed">
-                  RULEBOOK
-                </Button>
-                <span className="text-[10px] font-mono text-white/50 mt-1.5 uppercase tracking-widest text-center">
-                  Revealed by 8th April 2026
-                </span>
-              </div>
-              <button className="p-4 border border-white/10 hover:bg-white/5 transition-colors text-white/60 hover:text-white shrink-0">
+              {event.rulebookPdf ? (
+                <div className="flex flex-col items-center">
+                  <a
+                    href={encodeURI(event.rulebookPdf)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-12 py-4 border border-white/20 bg-white/5 text-white/80 hover:text-white hover:bg-white/10 transition-colors uppercase tracking-widest font-orbitron text-sm font-bold"
+                    aria-label={`Open ${event.title} rulebook PDF`}
+                  >
+                    <FileText size={16} />
+                    RULEBOOK
+                  </a>
+                  <span className="text-[10px] font-mono text-white/50 mt-1.5 uppercase tracking-widest text-center">
+                    PDF download
+                  </span>
+                </div>
+              ) : (
+                <div className="flex flex-col items-center">
+                  <Button size="lg" disabled className="px-12 border border-white/20 bg-white/5 text-white/50 cursor-not-allowed">
+                    RULEBOOK
+                  </Button>
+                  <span className="text-[10px] font-mono text-white/50 mt-1.5 uppercase tracking-widest text-center">
+                    Revealed by 8th April 2026
+                  </span>
+                </div>
+              )}
+              <button
+                type="button"
+                title="Share event"
+                aria-label="Share event"
+                className="p-4 border border-white/10 hover:bg-white/5 transition-colors text-white/60 hover:text-white shrink-0"
+              >
                 <Share2 size={24} />
               </button>
             </motion.div>

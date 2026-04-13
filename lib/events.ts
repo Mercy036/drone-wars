@@ -7,6 +7,7 @@ export interface Event {
   longDescription?: string;
   eligibilityNote?: string;
   image: string;
+  rulebookPdf?: string;
   color: string;
   category:
     | "COMPETITION"
@@ -39,6 +40,7 @@ export const events: Event[] = [
     longDescription:
       "An FPV Drone Racing Challenge is a high-intensity competition that puts a pilot's ability to the test as they navigate their drone through a fast-paced obstacle course. The event is crafted to showcase precision in control, rapid decision-making, agility, spatial awareness, and sharp reflexes in dynamic, real-world racing conditions.\n\nTo ensure fairness and technical merit, only custom-built multi-rotor drones are allowed. Ready-to-Fly (RTF) commercially purchased drones are strictly prohibited.",
     image: "/event-fpv-racing.jpg",
+    rulebookPdf: "/FPV rulebook DronoWar.pdf",
     color: "primary",
     category: "COMPETITION",
     skillsTested: [
@@ -66,6 +68,7 @@ export const events: Event[] = [
     description:
       "Simulates real-world drone logistics. Navigate, visually identify the drop zone, and release payload accurately.",
     image: "/event-payload-delivery.jpg",
+    rulebookPdf: "/Payload rulebook DronoWar.pdf",
     color: "secondary",
     category: "COMPETITION",
     skillsTested: [
@@ -94,6 +97,7 @@ export const events: Event[] = [
     description:
       "Program your drone to complete mission stages without human control: autonomous takeoff, navigation, marker detection, and precision landing.",
     image: "/event-autonomous-mission.jpg",
+    rulebookPdf: "/Autonomous rulebook DronoWar.pdf",
     color: "accent",
     category: "COMPETITION",
     skillsTested: [
@@ -120,6 +124,7 @@ export const events: Event[] = [
     description:
       "Design, build, and fly a radio-controlled aircraft to demonstrate engineering skill and flying precision. The challenge focuses on executing smooth takeoff, controlled aerial maneuvers, and achieving an accurate landing within a designated zone while maintaining stability and efficiency.",
     image: "/obstacle-navigation.jpg",
+    rulebookPdf: "/RC rulebook DronoWar.pdf",
     color: "yellow",
     category: "COMPETITION",
     skillsTested: [
@@ -152,6 +157,7 @@ export const events: Event[] = [
     description:
       "Present a drone design or prototype demonstrating innovation, technical advancement, or a novel application. Focus on engineering creativity.",
     image: "/event-drone-design.jpg",
+    rulebookPdf: "/Design.pdf",
     color: "cyan",
     category: "EXHIBITION",
     skillsTested: [

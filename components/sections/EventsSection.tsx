@@ -4,7 +4,7 @@ import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { events, Event } from "@/lib/events";
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { MoreVertical, Circle, X } from "lucide-react";
+import { MoreVertical, Circle, X, FileText } from "lucide-react";
 import { EventTimeline } from "./EventTimeline";
 
 const categories = ["ALL", "COMPETITION", "EXHIBITION"] as const;
@@ -85,13 +85,27 @@ function EventPreviewCard({
         </p>
 
         <div className="mt-4 flex items-center gap-3">
-          <button
-            type="button"
-            className="border border-white/20 bg-black/35 px-3 py-1.5 font-mono text-[9px] uppercase tracking-[0.18em] text-white/85 transition-colors duration-300 group-hover:bg-white/10"
-            aria-label={`View ${event.title} rulebook and details`}
-          >
-            Rulebook
-          </button>
+          {event.rulebookPdf ? (
+            <a
+              href={encodeURI(event.rulebookPdf)}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(eventClick) => eventClick.stopPropagation()}
+              className="inline-flex items-center gap-2 border border-white/20 bg-black/35 px-3 py-1.5 font-mono text-[9px] uppercase tracking-[0.18em] text-white/85 transition-colors duration-300 group-hover:bg-white/10"
+              aria-label={`Open ${event.title} rulebook PDF`}
+            >
+              <FileText size={12} />
+              Rulebook
+            </a>
+          ) : (
+            <button
+              type="button"
+              className="border border-white/20 bg-black/35 px-3 py-1.5 font-mono text-[9px] uppercase tracking-[0.18em] text-white/85 transition-colors duration-300 group-hover:bg-white/10"
+              aria-label={`View ${event.title} rulebook and details`}
+            >
+              Rulebook
+            </button>
+          )}
           <div className="h-px w-10 bg-white/25" />
         </div>
 

@@ -178,28 +178,30 @@ export function EventsSection() {
         </div>
 
         {/* Grid matching provided visual reference */}
-        <div className="grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3 lg:gap-6 mb-6">
+        <div className="flex flex-wrap justify-center gap-7 lg:gap-6 mb-6">
           {filteredEvents.slice(0, 3).map((event, index) => (
-            <EventPreviewCard
-              key={event.slug}
-              event={event}
-              index={index}
-              onSelect={setSelectedEvent}
-              shouldAnimate={shouldAnimate}
-            />
+            <div key={event.slug} className="w-full md:w-[calc(50%-0.875rem)] lg:w-[calc(33.333%-1rem)]">
+              <EventPreviewCard
+                event={event}
+                index={index}
+                onSelect={setSelectedEvent}
+                shouldAnimate={shouldAnimate}
+              />
+            </div>
           ))}
         </div>
 
         {/* Bottom rows for remaining cards */}
-        <div className="mx-auto grid max-w-[1240px] grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3 md:gap-8">
+        <div className="mx-auto flex flex-wrap justify-center max-w-[1240px] gap-7 md:gap-8">
           {filteredEvents.slice(3).map((event, index) => (
-            <EventPreviewCard
-              key={event.slug}
-              event={event}
-              index={index + 3}
-              onSelect={setSelectedEvent}
-              shouldAnimate={shouldAnimate}
-            />
+            <div key={event.slug} className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.33rem)]">
+              <EventPreviewCard
+                event={event}
+                index={index + 3}
+                onSelect={setSelectedEvent}
+                shouldAnimate={shouldAnimate}
+              />
+            </div>
           ))}
         </div>
       </div>

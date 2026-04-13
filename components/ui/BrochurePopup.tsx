@@ -17,7 +17,7 @@ export function BrochurePopup() {
     "payload-delivery",
     "autonomous-mission",
     "drone-design",
-    "obstacle-navigation",
+    "RC PLANE",
   ];
   const featuredEvents = featuredEventSlugs
     .map((slug) => events.find((event) => event.slug === slug))
@@ -194,7 +194,7 @@ export function BrochurePopup() {
                   <div className="space-y-2">
                     {featuredEvents.map((event) => (
                       <div key={event.slug} className="border border-white/15 bg-black/30 px-3 py-2 text-[11px] text-white/85 font-mono uppercase tracking-[0.12em]">
-                        {event.slug === "obstacle-navigation" ? "RC Plane" : event.title}
+                        {event.title}
                       </div>
                     ))}
                   </div>

@@ -93,6 +93,7 @@ function EventPreviewCard({
               onClick={(eventClick) => eventClick.stopPropagation()}
               className="inline-flex items-center gap-2 border border-white/20 bg-black/35 px-3 py-1.5 font-mono text-[9px] uppercase tracking-[0.18em] text-white/85 transition-colors duration-300 group-hover:bg-white/10"
               aria-label={`Open ${event.title} rulebook PDF`}
+              
             >
               <FileText size={12} />
               Rulebook

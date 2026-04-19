@@ -91,7 +91,7 @@ export function BrochurePopup() {
             initial={shouldAnimate ? { opacity: 0 } : false}
             animate={shouldAnimate ? { opacity: 1 } : undefined}
             exit={shouldAnimate ? { opacity: 0 } : undefined}
-            className="fixed inset-0 z-[100] flex items-center justify-center bg-[rgba(1,2,8,0.88)] px-4"
+            className="fixed inset-0 z-[150] flex items-center justify-center bg-[rgba(1,2,8,0.88)] px-4"
           >
             <motion.div
               initial={shouldAnimate ? { opacity: 0, y: 24, scale: 0.975 } : false}

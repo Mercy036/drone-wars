@@ -12,24 +12,7 @@ export function Hero() {
     <section className="relative h-screen md:h-[100dvh] flex items-center justify-center overflow-hidden">
       <div className="container mx-auto px-4 w-full relative z-[60]">
         <div className="flex flex-col items-center text-center relative">
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.8 }}
-            className="mt-20 md:mt-24 mb-1 md:mb-2 px-4 md:px-6 py-1.5 md:py-2 border border-white/10 bg-black/40 text-[8px] md:text-[10px] font-mono tracking-[0.3em] md:tracking-[0.4em] uppercase text-white/70 flex items-center gap-2 md:gap-3 hover:border-primary/50 transition-colors"
-          >
-            <div className="flex gap-1">
-              {[...Array(3)].map((_, i) => (
-                <motion.span
-                  key={i}
-                  animate={allowLoopAnimations ? { opacity: [0.2, 1, 0.2] } : undefined}
-                  transition={allowLoopAnimations ? { duration: 1.5, repeat: Infinity, delay: i * 0.2 } : undefined}
-                  className="w-1 h-1 bg-primary rounded-full"
-                />
-              ))}
-            </div>
-            Flight Protocol Active // 2026
-          </motion.div>
+
 
           <div className="relative mb-4 md:mb-6 text-center w-full px-2">
             <motion.h1

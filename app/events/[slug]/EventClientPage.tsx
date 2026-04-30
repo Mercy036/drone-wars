@@ -114,7 +114,7 @@ export function EventClientPage({ event }: { event: Event }) {
                     RULEBOOK
                   </Button>
                   <span className="text-[10px] font-mono text-white/50 mt-1.5 uppercase tracking-widest text-center">
-                    Revealed by 1st May 2026
+                    Revealed by 25th MAY, 2026
                   </span>
                 </div>
               )}

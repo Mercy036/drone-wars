@@ -297,41 +297,43 @@ export function EventsSection() {
                 className="w-full flex flex-col md:flex-row gap-8 md:gap-10 mt-auto"
               >
                 {/* Rulebook Square Box with Preview */}
-                <div className="group relative flex-1 min-w-[260px] max-w-[370px] aspect-square rounded-2xl overflow-hidden border border-[#ff4d00]/30 bg-[linear-gradient(145deg,rgba(255,77,0,0.10),rgba(0,240,255,0.08),rgba(10,12,20,0.96))] p-5 flex flex-col shadow-[0_8px_32px_rgba(255,77,0,0.10)] items-center justify-center">
-                  <div className="absolute top-3 left-3 z-10 inline-flex items-center gap-2 border border-[#ff4d00]/40 bg-[linear-gradient(125deg,rgba(255,77,0,0.18),rgba(255,77,0,0.08))] px-3 py-1 text-[10px] font-mono tracking-[0.18em] uppercase text-[#ffd4c0]">
+                <div className="flex flex-col flex-1 min-w-[260px] max-w-[370px] aspect-square">
+                  <div className="mb-3 inline-flex items-center gap-2 border border-[#ff4d00]/40 bg-[linear-gradient(125deg,rgba(255,77,0,0.18),rgba(255,77,0,0.08))] px-3 py-1 text-[10px] font-mono tracking-[0.18em] uppercase text-[#ffd4c0] rounded-lg self-start">
                     <span className="font-bold text-[#ff4d00]">01</span>
                     Rulebook
                   </div>
-                  <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_80%_10%,rgba(255,77,0,0.10),transparent_38%),radial-gradient(circle_at_10%_90%,rgba(0,240,255,0.07),transparent_40%)]" />
-                  <div className="flex flex-col items-center justify-center w-full h-full">
-                    {selectedEvent.rulebookPdf ? (
-                      <div className="w-full h-48 sm:h-56 md:h-64 lg:h-72 overflow-y-auto rounded bg-black/30 border border-white/10 flex items-center justify-center mb-4 transition-all duration-300 shadow-[0_0_16px_2px_rgba(255,77,0,0.10)]">
-                        <iframe
-                          src={selectedEvent.rulebookPdf + '#toolbar=0&navpanes=0&scrollbar=0'}
-                          title="Rulebook Preview"
-                          className="w-full h-full border-none rounded-xl bg-black/60 shadow-lg pointer-events-none"
-                          style={{ minHeight: '192px', maxHeight: '320px' }}
-                          tabIndex={-1}
-                        />
-                      </div>
-                    ) : (
-                      <div className="flex flex-col items-center justify-center h-full text-center text-white/70 font-mono text-sm p-6">
-                        <FileText size={32} className="mx-auto mb-3 text-[#ff4d00]" />
-                        Rulebook coming soon!
-                      </div>
-                    )}
-                    {selectedEvent.rulebookPdf && (
-                      <div className="w-full flex justify-center">
-                        <button
-                          className="mt-1 px-4 py-1.5 rounded bg-[#ff4d00] text-white font-mono text-xs uppercase tracking-widest shadow hover:bg-[#ff7a3d] transition-colors"
-                          onClick={() => {
-                            window.location.href = `/rulebook-viewer?pdf=${encodeURIComponent(selectedEvent.rulebookPdf || "")}&title=${encodeURIComponent(selectedEvent.title)}`;
-                          }}
-                        >
-                          Expand PDF
-                        </button>
-                      </div>
-                    )}
+                  <div className="group relative flex-1 w-full rounded-2xl overflow-hidden border border-[#ff4d00]/30 bg-[linear-gradient(145deg,rgba(255,77,0,0.10),rgba(0,240,255,0.08),rgba(10,12,20,0.96))] p-5 flex flex-col shadow-[0_8px_32px_rgba(255,77,0,0.10)] items-center justify-center">
+                    <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_80%_10%,rgba(255,77,0,0.10),transparent_38%),radial-gradient(circle_at_10%_90%,rgba(0,240,255,0.07),transparent_40%)]" />
+                    <div className="flex flex-col items-center justify-center w-full h-full">
+                      {selectedEvent.rulebookPdf ? (
+                        <div className="w-full h-48 sm:h-56 md:h-64 lg:h-72 overflow-y-auto rounded bg-black/30 border border-white/10 flex items-center justify-center mb-4 transition-all duration-300 shadow-[0_0_16px_2px_rgba(255,77,0,0.10)]">
+                          <iframe
+                            src={selectedEvent.rulebookPdf + '#toolbar=0&navpanes=0&scrollbar=0'}
+                            title="Rulebook Preview"
+                            className="w-full h-full border-none rounded-xl bg-black/60 shadow-lg pointer-events-none"
+                            style={{ minHeight: '192px', maxHeight: '320px' }}
+                            tabIndex={-1}
+                          />
+                        </div>
+                      ) : (
+                        <div className="flex flex-col items-center justify-center h-full text-center text-white/70 font-mono text-sm p-6">
+                          <FileText size={32} className="mx-auto mb-3 text-[#ff4d00]" />
+                          Rulebook coming soon!
+                        </div>
+                      )}
+                      {selectedEvent.rulebookPdf && (
+                        <div className="w-full flex justify-center">
+                          <button
+                            className="mt-1 px-4 py-1.5 rounded bg-[#ff4d00] text-white font-mono text-xs uppercase tracking-widest shadow hover:bg-[#ff7a3d] transition-colors"
+                            onClick={() => {
+                              window.location.href = `/rulebook-viewer?pdf=${encodeURIComponent(selectedEvent.rulebookPdf || "")}&title=${encodeURIComponent(selectedEvent.title)}`;
+                            }}
+                          >
+                            Expand PDF
+                          </button>
+                        </div>
+                      )}
+                    </div>
                   </div>
                 </div>
 

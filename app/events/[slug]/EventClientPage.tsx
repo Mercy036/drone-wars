@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/Button";
 import Link from "next/link";
 import { ArrowLeft, Calendar, MapPin, Share2, FileText } from "lucide-react";
 import { CacheCleanButton } from "@/components/ui/CacheCleanButton";
+import { EventTimeline } from "@/components/sections/EventTimeline";
 
 export function EventClientPage({ event }: { event: Event }) {
   return (
@@ -74,14 +75,29 @@ export function EventClientPage({ event }: { event: Event }) {
               </div>
             </motion.div>
 
+
             <motion.p 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 0.5 }}
-              className="text-white/60 font-mono leading-relaxed text-lg mb-12 max-w-xl"
+              className="text-white/60 font-mono leading-relaxed text-lg mb-8 max-w-xl"
             >
               {event.description}
             </motion.p>
+
+            {/* Timeline Section */}
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.55 }}
+              className="mb-12"
+            >
+              <EventTimeline 
+                timeline={event.timeline} 
+                day1Date={event.date?.split("-")[0]?.trim()}
+                day2Date={event.date?.split("-")[1]?.trim() || event.date?.trim()}
+              />
+            </motion.div>
 
             <motion.div 
               initial={{ opacity: 0, y: 10 }}
